@@ -1,0 +1,193 @@
+html {
+  box-sizing: border-box;
+  font-family: 'Lakers';
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+.body {
+  width: 320px;
+}
+
+
+.menu {
+  display: flex;
+  align-items: center;
+  height: 88px;
+  margin-left: -6px;
+  justify-content: space-around;
+  
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  margin-left: -6px;
+  font-family: 'Lakers-bold';
+}
+
+.title__highlight {
+  margin-right: 10px;
+}
+
+.nav {
+  display: flex;
+  white-space: nowrap; 
+  padding-left: 15px;
+  overflow: scroll;
+}
+
+.nav__link1 {
+  border: 2px solid #b8ffec;
+  border-radius: 6px;
+}
+
+.nav__link2 {
+  border: 2px solid #b8ffec;
+  border-radius: 6px;
+}
+
+.ml {
+  margin-right: 10px;
+  padding: 2px 4px;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+}
+
+.content__text {
+  display: flex;
+  flex-direction: column;
+  margin-left: 15px;
+  font-size: 14px;
+  
+  font-family: 'Lakers-regular';
+}
+
+.content__read-more {
+  display: flex;
+  font-family: 'Lakers-bold';
+}
+
+.read-more__text {
+  font-size: 16px;
+  
+}
+
+.content__img {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  
+}
+
+.content__picture {
+  width: 100%;
+  height: auto;
+  padding-top: 30px;
+}
+
+.laptop-size{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: auto;
+    margin-right: 100px;
+  }
+
+
+  .laptop-spacing {
+    margin-left: 15px;
+    font-family: 'Lakers-regular';
+  }
+
+
+@media (max-width: 320px) 
+{
+  .menu__lstick {display: none ;}
+  .menu__button-telephone {display: none ;}
+  .menu__button-chat {display: none ;}
+  .menu__button-profile {display: none ;}
+  .laptop-size{display: none;}
+  .nav__link1{display:none;}
+  .content__laptop-size {display: none;}
+  .content__desktop-size {display: none;}
+  .content {flex-direction: column;}
+}
+
+
+@media (min-width: 321px) and (max-width: 768px)
+{
+  .h {padding: 10px;}
+  .menu__logo {margin-right: auto;}
+  .laptop-size{display: none;}
+  .nav__link1{display:none;}
+  .nav__link5 {display: none;}
+  
+  .content {
+    margin-top: 35px;
+    justify-content: space-around;
+  }
+  .content__mobile-size{display: none;}
+  .content__desktop-size {display: none;}
+  .content__picture {
+    width: 360px;
+    border-radius: 6px;
+    padding-top: 15px;
+  }
+}
+
+@media (min-width: 769px) 
+{
+  .menu {display: none};
+  .nav {flex-wrap: wrap;}
+  .nav__link2 {border: none;}
+  .nav__link3 {display: none;}
+  
+  .content {
+    margin-top: 35px;
+    justify-content: space-around;
+  }
+  
+  .content__text {
+    width: auto;
+    margin-top: 25px;
+  }
+  .content__mobile-size{display: none;}
+  .content__laptop-size {display: none;}
+  .content__img {
+    width: 530px;
+  }
+  .content__picture {
+    width: 530px;
+    border-radius: 6px;
+  }
+}
+
+@font-face {
+  font-family: 'Lakers';
+  src: url('font/TTLakes-ExtraLight.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lakers-bold';
+  src: url('font/TTLakesCompressed-DemiBoldItalic.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lakers-regular';
+  src: url('font/TTLakes-Regular.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
